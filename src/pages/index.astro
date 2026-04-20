@@ -1,82 +1,58 @@
 ---
+import "../styles/global.css";
+
+const title = "Free Beginner Guide | Mobile Income";
+const description =
+  "Discover a beginner-friendly way to start building extra income using only your phone.";
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Start Simple Online</title>
-
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #0f172a, #020617);
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        text-align: center;
-      }
-
-      .container {
-        max-width: 600px;
-        padding: 20px;
-      }
-
-      h1 {
-        font-size: 36px;
-        line-height: 1.3;
-      }
-
-      p {
-        font-size: 18px;
-        color: #cbd5f5;
-        margin-top: 20px;
-      }
-
-      .btn {
-        display: inline-block;
-        margin-top: 30px;
-        padding: 16px 28px;
-        background: #facc15;
-        color: black;
-        font-weight: bold;
-        border-radius: 8px;
-        text-decoration: none;
-        font-size: 18px;
-      }
-
-      .note {
-        margin-top: 15px;
-        font-size: 14px;
-        color: #94a3b8;
-      }
-    </style>
+    <title>{title}</title>
+    <meta name="description" content={description} />
   </head>
 
   <body>
-    <div class="container">
+    <div class="wrap">
+      <div class="card">
+        <div class="top-badge">
+          FREE BEGINNER GUIDE
+        </div>
 
-      <h1>
-        Confused About Making Money Online?<br>
-        Start Simple
-      </h1>
+        <h1>
+          How Beginners Are Starting Small Online Income Streams Using Only Their Phone
+        </h1>
 
-      <p>
-        Get a free beginner-friendly guide that shows you a clear and simple path 
-        to understanding how to start online without confusion or overwhelm.
-      </p>
+        <p class="sub">
+          Discover a beginner-friendly model for everyday people who want extra income
+          without complicated tech, expensive tools, or social media pressure.
+        </p>
 
-      <a href="https://a8a5-darwin.systeme.io/36e6d282" class="btn">
-        I Want My Free Guide
-      </a>
+        <ul class="bullets">
+          <li>✔ No experience needed</li>
+          <li>✔ Beginner-friendly simple model</li>
+          <li>✔ Mobile accessible</li>
+          <li>✔ Works in spare time</li>
+          <li>✔ Free to learn</li>
+        </ul>
 
-      <div class="note">
-        Free guide • Beginner friendly • No hype
+        <a
+          href="https://a8a5-darwin.systeme.io/36e6d282"
+          class="btn"
+        >
+          Send Me The Free Guide
+        </a>
+
+        <p class="trust">
+          Free access • Beginner friendly • No spam
+        </p>
       </div>
 
+      <div class="footer">
+        © 2026 Growth Clicks Lab
+      </div>
     </div>
   </body>
 </html>
