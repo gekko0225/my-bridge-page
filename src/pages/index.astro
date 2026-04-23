@@ -1,58 +1,445 @@
----
-import "../styles/global.css";
-
-const title = "Free Beginner Guide | Mobile Income";
-const description =
-  "Discover a beginner-friendly way to start building extra income using only your phone.";
----
-
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-  </head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Phone Trick That's Replacing 9-to-5 Jobs</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #f5f0e8;
+    --gold: #e8b84b;
+    --gold-dark: #c49a2e;
+    --red: #e84b4b;
+    --gray: #1a1a1a;
+    --muted: #888;
+  }
 
-  <body>
-    <div class="wrap">
-      <div class="card">
-        <div class="top-badge">
-          FREE BEGINNER GUIDE
-        </div>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-        <h1>
-          How Beginners Are Starting Small Online Income Streams Using Only Their Phone
-        </h1>
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
 
-        <p class="sub">
-          Discover a beginner-friendly model for everyday people who want extra income
-          without complicated tech, expensive tools, or social media pressure.
-        </p>
+  /* ── TOP BAR ── */
+  .topbar {
+    background: var(--red);
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    animation: pulse-bar 2s ease-in-out infinite;
+  }
+  @keyframes pulse-bar { 0%,100%{opacity:1} 50%{opacity:.85} }
 
-        <ul class="bullets">
-          <li>✔ No experience needed</li>
-          <li>✔ Beginner-friendly simple model</li>
-          <li>✔ Mobile accessible</li>
-          <li>✔ Works in spare time</li>
-          <li>✔ Free to learn</li>
-        </ul>
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    padding: 80px 20px 60px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(232,184,75,.18) 0%, transparent 70%);
+  }
+  .eyebrow {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--black);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    margin-bottom: 24px;
+    clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+  }
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(42px, 8vw, 88px);
+    line-height: .95;
+    letter-spacing: 1px;
+    margin-bottom: 28px;
+    position: relative;
+  }
+  h1 em {
+    font-style: normal;
+    color: var(--gold);
+    display: block;
+  }
+  .sub {
+    font-size: clamp(17px, 2.5vw, 21px);
+    max-width: 620px;
+    margin: 0 auto 40px;
+    color: #ccc5b3;
+    font-weight: 400;
+  }
+  .hero-cta {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--black);
+    font-weight: 700;
+    font-size: 18px;
+    padding: 18px 48px;
+    text-decoration: none;
+    letter-spacing: .5px;
+    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+    transition: background .2s, transform .2s;
+    text-transform: uppercase;
+    position: relative;
+  }
+  .hero-cta:hover { background: #f5cc6b; transform: translateY(-2px); }
+  .hero-cta::after {
+    content: ' →';
+  }
+  .trust-line {
+    margin-top: 18px;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: .5px;
+  }
+  .trust-line span { color: var(--gold); }
 
-        <a
-          href="https://a8a5-darwin.systeme.io/2847c9a6"
-          class="btn"
-        >
-          Send Me The Free Guide
-        </a>
+  /* ── SCROLL REVEAL ── */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
 
-        <p class="trust">
-          Free access • Beginner friendly • No spam
-        </p>
-      </div>
+  /* ── STATS STRIP ── */
+  .stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    border-top: 1px solid #2a2a2a;
+    border-bottom: 1px solid #2a2a2a;
+    background: var(--gray);
+  }
+  .stat {
+    flex: 1;
+    min-width: 140px;
+    padding: 28px 24px;
+    text-align: center;
+    border-right: 1px solid #2a2a2a;
+  }
+  .stat:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+  }
+  .stat-label { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
 
-      <div class="footer">
-        © 2026 Growth Clicks Lab
+  /* ── SECTION ── */
+  section { padding: 70px 20px; max-width: 780px; margin: 0 auto; }
+
+  h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(30px, 5vw, 52px);
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+    line-height: 1.05;
+  }
+  h2 .accent { color: var(--gold); }
+
+  /* ── STORY ── */
+  .story p { margin-bottom: 18px; color: #ccc5b3; }
+  .story strong { color: var(--white); }
+
+  /* ── PROBLEM/SOLUTION GRID ── */
+  .ps-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: #2a2a2a;
+    border: 1px solid #2a2a2a;
+    margin: 40px 0;
+  }
+  .ps-card {
+    background: var(--gray);
+    padding: 32px 28px;
+  }
+  .ps-card.good { border-top: 3px solid var(--gold); }
+  .ps-card.bad { border-top: 3px solid var(--red); }
+  .ps-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+  .ps-card.bad h3 { color: var(--red); }
+  .ps-card.good h3 { color: var(--gold); }
+  .ps-card ul { list-style: none; }
+  .ps-card ul li { padding: 7px 0; font-size: 15px; color: #ccc5b3; border-bottom: 1px solid #252525; }
+  .ps-card ul li:last-child { border: none; }
+  .ps-card.bad li::before { content: '✗  '; color: var(--red); }
+  .ps-card.good li::before { content: '✓  '; color: var(--gold); }
+
+  /* ── HOW IT WORKS ── */
+  .steps { display: flex; flex-direction: column; gap: 24px; margin-top: 32px; }
+  .step {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 24px;
+    background: var(--gray);
+    border-left: 4px solid var(--gold);
+  }
+  .step-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    color: var(--gold);
+    line-height: 1;
+    flex-shrink: 0;
+    opacity: .35;
+  }
+  .step-body h4 { font-weight: 700; font-size: 17px; margin-bottom: 6px; }
+  .step-body p { color: #bbb5a3; font-size: 15px; }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 16px; margin-top: 32px; }
+  .tcard {
+    background: var(--gray);
+    padding: 28px 24px;
+    border-top: 2px solid var(--gold);
+    position: relative;
+  }
+  .tcard::before {
+    content: '"';
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    color: var(--gold);
+    opacity: .15;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    line-height: 1;
+  }
+  .tcard p { font-size: 15px; color: #ccc5b3; font-style: italic; position: relative; }
+  .tcard .author { font-weight: 700; color: var(--white); font-style: normal; font-size: 14px; margin-top: 12px; display: block; }
+  .tcard .earn { color: var(--gold); font-family: 'Bebas Neue', sans-serif; font-size: 20px; }
+
+  /* ── DISCLAIMER ── */
+  .disclaimer {
+    background: #111;
+    padding: 24px 28px;
+    border: 1px solid #2a2a2a;
+    border-radius: 2px;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.6;
+    margin: 40px 0 0;
+  }
+
+  /* ── FINAL CTA ── */
+  .cta-section {
+    background: linear-gradient(135deg, #111 0%, #1a1400 100%);
+    border-top: 1px solid #2a2a2a;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  .price-box {
+    display: inline-block;
+    background: var(--gray);
+    border: 2px solid var(--gold);
+    padding: 32px 48px;
+    margin-bottom: 36px;
+  }
+  .price-was { text-decoration: line-through; color: var(--muted); font-size: 20px; }
+  .price-now { font-family: 'Bebas Neue', sans-serif; font-size: 70px; color: var(--gold); line-height: 1; }
+  .price-label { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+  .cta-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--black);
+    font-weight: 700;
+    font-size: 20px;
+    padding: 22px 60px;
+    text-decoration: none;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+    transition: background .2s, transform .2s;
+    animation: glow 2.5s ease-in-out infinite;
+  }
+  @keyframes glow {
+    0%,100%{ box-shadow: 0 0 0 0 rgba(232,184,75,0); }
+    50%{ box-shadow: 0 0 30px 6px rgba(232,184,75,.35); }
+  }
+  .cta-btn:hover { background: #f5cc6b; transform: translateY(-2px); }
+  .guarantee {
+    margin-top: 24px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .guarantee span { color: var(--gold); font-weight: 700; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #050505;
+    border-top: 1px solid #1a1a1a;
+    text-align: center;
+    padding: 32px 20px;
+    font-size: 12px;
+    color: #444;
+  }
+  footer a { color: #666; }
+
+  @media(max-width:600px){
+    .ps-grid { grid-template-columns: 1fr; }
+    .stat { min-width: 50%; }
+    .price-now { font-size: 52px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">⚡ Limited Offer — Price Goes Up Soon. Act Now.</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="eyebrow">Attention: Side Hustle Seekers</div>
+  <h1>Stop Trading Hours<br>for Dollars.
+    <em>Your Phone Can Do The Work.</em>
+  </h1>
+  <p class="sub">Discover the dead-simple affiliate system that lets complete beginners earn commissions daily — using only a smartphone and 5 minutes of free time.</p>
+  <a href="https://mobileprofits.co/journeys?aid=3531235" class="hero-cta">Show Me The System</a>
+  <p class="trust-line"><span>60-Day Money-Back Guarantee</span> · No tech skills needed · One-time fee only</p>
+</section>
+
+<!-- STATS -->
+<div class="stats reveal">
+  <div class="stat"><span class="stat-num">$47</span><span class="stat-label">One-time access</span></div>
+  <div class="stat"><span class="stat-num">60</span><span class="stat-label">Day guarantee</span></div>
+  <div class="stat"><span class="stat-num">5<small style="font-size:.5em">min</small></span><span class="stat-label">Per day required</span></div>
+  <div class="stat"><span class="stat-num">0</span><span class="stat-label">Tech skills needed</span></div>
+</div>
+
+<!-- STORY -->
+<section class="story reveal">
+  <h2>I Was <span class="accent">Sick</span> of Watching Others Win Online</h2>
+  <p>You've seen them — people posting screenshots of PayPal deposits, Stripe dashboards, all while you're sitting there wondering what you're missing. You've tried the YouTube courses. The free PDFs. The "guru" webinars that go nowhere.</p>
+  <p><strong>Here's what nobody tells you:</strong> the people winning online aren't smarter. They're not more tech-savvy. They just found the right system first.</p>
+  <p>That system is now available to you. <strong>No websites to build. No ads to buy. No audience to grow from scratch.</strong> Just a point-and-click machine that generates affiliate commissions using content that's already been made for you.</p>
+</section>
+
+<!-- PROBLEM vs SOLUTION -->
+<section class="reveal">
+  <h2>The Old Way vs. <span class="accent">The Smart Way</span></h2>
+  <div class="ps-grid">
+    <div class="ps-card bad">
+      <h3>Without This System</h3>
+      <ul>
+        <li>Build websites from scratch</li>
+        <li>Write your own content daily</li>
+        <li>Learn SEO, funnels, ads</li>
+        <li>Spend months with no results</li>
+        <li>Pay $1,000+ before earning $1</li>
+      </ul>
+    </div>
+    <div class="ps-card good">
+      <h3>With Mobile Profits</h3>
+      <ul>
+        <li>Done-for-you landing pages</li>
+        <li>Ready-made content to post</li>
+        <li>No tech skills required</li>
+        <li>Start same day you join</li>
+        <li>One-time $47 investment</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="reveal">
+  <h2>How It <span class="accent">Works</span> — 3 Simple Steps</h2>
+  <div class="steps">
+    <div class="step">
+      <span class="step-num">01</span>
+      <div class="step-body">
+        <h4>Pick Your Niche</h4>
+        <p>Choose from proven high-converting niches: weight loss, dating, survival, pet care, make money online. Every niche comes fully loaded with content and pre-coded pages.</p>
       </div>
     </div>
-  </body>
+    <div class="step">
+      <span class="step-num">02</span>
+      <div class="step-body">
+        <h4>Post Your Daily Content</h4>
+        <p>Receive fresh viral images, videos, and captions every day. Share them on Pinterest, Twitter, or YouTube Shorts in minutes. Your affiliate link is already embedded — nothing to set up.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">03</span>
+      <div class="step-body">
+        <h4>Collect Your Commissions</h4>
+        <p>Every time someone clicks and buys through your link, a commission is tracked and deposited automatically. You don't manage invoices or chase payments. The system handles it all.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="reveal">
+  <h2>Real People, <span class="accent">Real Results</span></h2>
+  <p style="color:#bbb5a3; margin-bottom:8px; font-size:14px; font-style:italic;">*Individual results vary. These are exceptional outcomes, not typical results. Success requires consistent effort and application.</p>
+  <div class="testimonials">
+    <div class="tcard">
+      <p>"I was totally clueless about affiliate marketing. Within weeks of consistent posting I saw my first commissions come in. Couldn't believe it was this simple."</p>
+      <span class="author">Sarah M. — Teacher<br><span class="earn">First commissions earned</span></span>
+    </div>
+    <div class="tcard">
+      <p>"I tried other systems and wasted money. This one actually gave me everything done for me. The content, the pages — I just had to show up and post."</p>
+      <span class="author">Dave T. — Retired<br><span class="earn">Working from phone daily</span></span>
+    </div>
+    <div class="tcard">
+      <p>"As a stay-at-home mom, I needed something flexible. This gave me a real way to contribute financially without needing to learn complicated stuff."</p>
+      <span class="author">Monica R. — Mom of 3<br><span class="earn">Earning extra income</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<div class="cta-section reveal">
+  <h2 style="max-width:600px;margin:0 auto 32px;">Get <span class="accent">Instant Access</span> Today</h2>
+  <div class="price-box">
+    <div class="price-was">Regular price $97</div>
+    <div class="price-now">$47</div>
+    <div class="price-label">One-Time Investment — No Monthly Fees</div>
+  </div>
+  <br>
+  <a href="https://mobileprofits.co/journeys?aid=3531235" class="cta-btn">Yes! Give Me Access Now →</a>
+  <p class="guarantee">🔒 Protected by a <span>60-day money-back guarantee</span>. If you're not satisfied, get a full refund — no questions asked.</p>
+
+  <div class="disclaimer">
+    <strong>Income Disclaimer:</strong> Results shown are not typical. The average person who purchases any "how-to" information gets little to no results. References to earnings or income on this page are for illustrative purposes only. Individual results will vary based on effort, experience, and market conditions. This product is a training program for affiliate marketing, not a guarantee of income.
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 · This is an independent affiliate review page, not the official Mobile Profits website.</p>
+  <p style="margin-top:8px;"><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a> · <a href="#">Contact</a></p>
+</footer>
+
+<script>
+  // Scroll reveal
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
 </html>
