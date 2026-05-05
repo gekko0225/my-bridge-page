@@ -1,160 +1,119 @@
 ---
-const pageTitle = "You're In! Check Your Email";
-const pageDescription =
-  "You're in! Check your email for your free guide and see the next simple step to start building online income.";
+const pageTitle = "Check Your Email";
 ---
 
-<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{pageTitle}</title>
-    <meta name="description" content={pageDescription} />
-
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #0b1020;
-        color: #fff;
-      }
-
-      .container {
-        max-width: 900px;
-        margin: auto;
-        padding: 20px;
-        text-align: center;
-      }
-
-      h1, h2 {
-        margin-bottom: 10px;
-      }
-
-      p {
-        color: #cbd5e1;
-        line-height: 1.6;
-      }
-
-      .badge {
-        display: inline-block;
-        background: #1f2937;
-        padding: 8px 14px;
-        border-radius: 20px;
-        font-size: 14px;
-        margin-bottom: 10px;
-      }
-
-      .box {
-        background: #111827;
-        padding: 25px;
-        border-radius: 10px;
-        margin-top: 20px;
-      }
-
-      .cta-btn {
-        background: #facc15;
-        color: #000;
-        padding: 15px 20px;
-        border-radius: 10px;
-        font-weight: bold;
-        display: inline-block;
-        margin-top: 20px;
-        text-decoration: none;
-      }
-
-      .steps {
-        text-align: left;
-        margin-top: 20px;
-      }
-
-      .steps li {
-        margin-bottom: 10px;
-      }
-
-      footer {
-        margin-top: 60px;
-        font-size: 12px;
-        color: #94a3b8;
-      }
-
-      .note {
-        font-size: 14px;
-        margin-top: 15px;
-        color: #cbd5e1;
-      }
-    </style>
   </head>
 
   <body>
-    <div class="container">
+    <main class="page">
+      <section class="card">
 
-      <!-- CONFIRMATION -->
-      <div class="badge">Step 1 Completed</div>
+        <h1>You're In 🎉</h1>
 
-      <h1>You're In! Check Your Email</h1>
+        <p class="main">
+          Your Brain Energy Reset Guide is on its way to your inbox.
+        </p>
 
-      <p>
-        Your free guide is on its way. Please check your inbox (and spam folder if needed)
-        to download it and get started.
-      </p>
+        <p class="instruction">
+          👉 Check your email in the next few minutes and download it.
+        </p>
 
-      <!-- NEXT STEPS -->
-      <div class="box">
-        <h2>Important: Do This Next</h2>
+        <div class="divider"></div>
 
-        <ul class="steps">
-          <li>Open the email we just sent you</li>
-          <li>Download your free guide</li>
-          <li>Read the first few pages to understand the system</li>
-        </ul>
-      </div>
-
-      <!-- TRANSITION -->
-      <div class="box">
-        <h2>Want to Take the First Step Faster?</h2>
+        <h2>Before You Go...</h2>
 
         <p>
-          Inside the guide, you'll learn that every online income system needs traffic.
-          Without traffic, nothing works.
+          Most people try to improve focus and energy with habits alone.
         </p>
 
         <p>
-          If you want a simple place to start, there is one platform many beginners use
-          to get initial traffic without overcomplicating things.
+          And while that helps… it’s often not enough.
         </p>
 
-        <!-- CTA DAILYADS -->
-        <a href="YOUR_DAILYADS_AFFILIATE_LINK" class="cta-btn">
-          Explore a Simple Traffic Source
+        <p>
+          That’s why many are now using targeted brain support to feel sharper,
+          more focused, and mentally energized.
+        </p>
+
+        <a href="https://720af9okbf0cjz7frhzehlsgs3.hop.clickbank.net" class="cta">
+          👉 See How It Works
         </a>
 
-        <!-- NUEVA FRASE (CLAVE) -->
         <p class="note">
-           If you decide to join, just send me a message and I’ll personally help you get started 
+          You can check it out now, or come back after reading your guide.
         </p>
 
-      </div>
-
-      <!-- EXPECTATION -->
-      <div class="box">
-        <h2>What Happens Next?</h2>
-
-        <p>
-          Over the next few days, I’ll send you a few simple emails to help you understand
-          how to build your first online income system step by step.
-        </p>
-
-        <p>
-          Keep an eye on your inbox — that’s where the real value is.
-        </p>
-      </div>
-
-      <!-- FOOTER -->
-      <footer>
-        This page is for educational and informational purposes only. Results are not guaranteed and will vary based on effort, consistency, skill, and market factors.
-      </footer>
-
-    </div>
+      </section>
+    </main>
   </body>
 </html>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Inter, system-ui, sans-serif;
+    background: #f4f8fb;
+  }
+
+  .page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .card {
+    max-width: 520px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  .main {
+    font-size: 18px;
+  }
+
+  .instruction {
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  .divider {
+    height: 1px;
+    background: #eee;
+    margin: 25px 0;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  .cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 24px;
+    background: #20c997;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .note {
+    font-size: 13px;
+    color: #777;
+    margin-top: 10px;
+  }
+</style>
