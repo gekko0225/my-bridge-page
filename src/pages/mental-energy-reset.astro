@@ -48,7 +48,9 @@ const pageDescription =
           <li>The overlooked support many people are using today</li>
         </ul>
 
-        <getresponse-form form-id="e9d8986d-1305-419a-96b8-00839003285f" e="1"></getresponse-form>
+       <div class="gr-form-wrapper">
+  <getresponse-form form-id="e9d8986d-1305-419a-96b8-00839003285f" e="1"></getresponse-form>
+</div>
       </div>
 
       <div class="visual">
@@ -279,4 +281,36 @@ const pageDescription =
       min-height: 320px;
     }
   }
+.gr-form-wrapper {
+  width: 100%;
+  max-width: 420px;
+  margin: 24px auto 0;
+  display: block;
+  min-height: 120px;
+}
+
+.gr-form-wrapper getresponse-form {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 860px) {
+  .gr-form-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 24px;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  getresponse-form {
+    display: block !important;
+    width: 100% !important;
+    min-height: 120px;
+  }
+}
+
 </style>
+
