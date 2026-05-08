@@ -10,59 +10,88 @@ const pageDescription =
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
-    <!-- GetResponse Analytics -->
-<script is:inline type="text/javascript">
-  (function(m, o, n, t, e, r, _) {
-    m['__GetResponseAnalyticsObject'] = e;
-    m[e] = m[e] || function() {
-      (m[e].q = m[e].q || []).push(arguments)
-    };
-    r = o.createElement(n);
-    _ = o.getElementsByTagName(n)[0];
-    r.async = 1;
-    r.src = t;
-    r.setAttribute('crossorigin', 'use-credentials');
-    _.parentNode.insertBefore(r, _);
-  })(window, document, 'script', 'https://an.gr-wcon.com/script/09fa50a3-9dc6-4c79-af4b-12529b247ad1/ga.js', 'GrTracking');
-</script>
-<!-- End GetResponse Analytics -->
   </head>
 
- <body>
-  <main class="page">
-    <section class="hero">
-      <div class="content">
-        <p class="eyebrow">Free Brain Energy Guide</p>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="left-column">
+          <div class="guide-preview">
+            <p class="eyebrow">Free Brain Energy Guide</p>
+            <h2>The Brain Energy Reset</h2>
+            <p>
+              5 simple ways to feel sharper, focused, and mentally energized again.
+            </p>
+          </div>
 
-        <h1>Feel Mentally Drained Lately?</h1>
+          <div class="form-card">
+            <form
+              method="post"
+              accept-charset="UTF-8"
+              action="https://www.aweber.com/scripts/addlead.pl"
+            >
+              <div style="display: none;">
+                <input type="hidden" name="meta_web_form_id" value="324013429" />
+                <input type="hidden" name="meta_split_id" value="" />
+                <input type="hidden" name="listname" value="awlist6954858" />
+                <input
+                  type="hidden"
+                  name="redirect"
+                  value="https://growthclickslab.com/thank-you"
+                />
+                <input
+                  type="hidden"
+                  name="meta_redirect_onlist"
+                  value="https://www.aweber.com/thankyou-coi.htm?m=text"
+                />
+                <input type="hidden" name="meta_adtracking" value="My_Web_Form" />
+                <input type="hidden" name="meta_message" value="1" />
+                <input type="hidden" name="meta_required" value="email" />
+                <input type="hidden" name="meta_tooltip" value="" />
+              </div>
 
-        <p class="subheadline">
-          Discover 5 simple ways to restore focus, clarity, and brain energy naturally.
-        </p>
+              <label for="awf_field-118680048">Email</label>
 
-        <ul class="benefits">
-          <li>Why your brain feels tired even after sleep</li>
-          <li>Hidden daily habits that quietly kill focus</li>
-          <li>A simple 10-minute brain reset routine</li>
-          <li>Foods and nutrients linked to mental clarity</li>
-          <li>The overlooked support many people are using today</li>
-        </ul>
+              <input
+                id="awf_field-118680048"
+                type="email"
+                name="email"
+                placeholder="Your best email"
+                required
+              />
 
-       <div class="gr-form-wrapper">
-  <getresponse-form form-id="e9d8986d-1305-419a-96b8-00839003285f" e="1"></getresponse-form>
-</div>
-      </div>
+              <button type="submit">Get Instant Access</button>
 
-      <div class="visual">
-        <div class="guide-card">
-          <p class="small">FREE GUIDE</p>
-          <h2>The Brain Energy Reset</h2>
-          <p>5 simple ways to feel sharper, focused, and mentally energized again.</p>
+              <p class="privacy">100% free. No spam. Unsubscribe anytime.</p>
+
+              <div style="display: none;">
+                <img
+                  src="https://forms.aweber.com/form/displays.htm?id=zEwsDIzMLEyc"
+                  alt=""
+                />
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
-</body>
+
+        <div class="right-column">
+          <h1>Feel Mentally Drained Lately?</h1>
+
+          <p class="subheadline">
+            Discover 5 simple ways to restore focus, clarity, and brain energy naturally.
+          </p>
+
+          <ul class="benefits">
+            <li>Why your brain feels tired even after sleep</li>
+            <li>Hidden daily habits that quietly kill focus</li>
+            <li>A simple 10-minute brain reset routine</li>
+            <li>Foods and nutrients linked to mental clarity</li>
+            <li>The overlooked support many people are using today</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
 
 <style>
@@ -71,10 +100,10 @@ const pageDescription =
     --dark: #10202f;
     --text: #34495e;
     --muted: #6b7c8f;
-    --primary: #1e88e5;
-    --primary-dark: #1269b3;
     --white: #ffffff;
     --accent: #20c997;
+    --accent-dark: #18b586;
+    --blue: #1e88e5;
   }
 
   * {
@@ -93,48 +122,132 @@ const pageDescription =
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 32px 18px;
+    padding: 42px 22px;
   }
 
   .hero {
     width: 100%;
-    max-width: 1120px;
+    max-width: 1040px;
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 48px;
+    grid-template-columns: 390px minmax(320px, 520px);
+    gap: 46px;
     align-items: center;
+    justify-content: center;
   }
 
-  .content {
+  .left-column {
+    display: grid;
+    gap: 18px;
+  }
+
+  .guide-preview,
+  .form-card,
+  .right-column {
     background: var(--white);
-    padding: 48px;
     border-radius: 28px;
-    box-shadow: 0 24px 80px rgba(16, 32, 47, 0.08);
+    box-shadow: 0 24px 70px rgba(16, 32, 47, 0.08);
+  }
+
+  .guide-preview {
+    min-height: 250px;
+    padding: 34px;
+    background:
+      radial-gradient(circle at top right, rgba(32, 201, 151, 0.25), transparent 35%),
+      linear-gradient(145deg, #10202f, #1e88e5);
+    color: var(--white);
   }
 
   .eyebrow {
-    display: inline-block;
-    margin: 0 0 16px;
-    padding: 8px 14px;
-    border-radius: 999px;
-    background: rgba(32, 201, 151, 0.12);
-    color: #0f8d68;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.03em;
+    margin: 0 0 18px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
+    opacity: 0.85;
+  }
+
+  .guide-preview h2 {
+    margin: 0 0 16px;
+    font-size: 42px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+
+  .guide-preview p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.45;
+    opacity: 0.92;
+  }
+
+  .form-card {
+    padding: 30px;
+  }
+
+  .form-card label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--dark);
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .form-card input[type="email"] {
+    width: 100%;
+    height: 54px;
+    border: 1px solid #d9e3ec;
+    border-radius: 12px;
+    padding: 0 16px;
+    font-size: 16px;
+    color: var(--dark);
+    outline: none;
+  }
+
+  .form-card input[type="email"]:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 4px rgba(30, 136, 229, 0.12);
+  }
+
+  .form-card button {
+    width: 100%;
+    height: 56px;
+    margin-top: 16px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--accent);
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  .form-card button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-1px);
+  }
+
+  .privacy {
+    margin: 14px 0 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .right-column {
+    padding: 50px;
   }
 
   h1 {
     margin: 0 0 18px;
     color: var(--dark);
-    font-size: clamp(38px, 6vw, 64px);
+    font-size: clamp(38px, 5vw, 58px);
     line-height: 1;
     letter-spacing: -0.05em;
   }
 
   .subheadline {
-    margin: 0 0 28px;
+    margin: 0 0 32px;
     font-size: 21px;
     line-height: 1.5;
     color: var(--text);
@@ -143,16 +256,16 @@ const pageDescription =
   .benefits {
     list-style: none;
     padding: 0;
-    margin: 0 0 32px;
+    margin: 0;
     display: grid;
-    gap: 14px;
+    gap: 16px;
   }
 
   .benefits li {
     position: relative;
-    padding-left: 30px;
-    font-size: 17px;
-    line-height: 1.4;
+    padding-left: 32px;
+    font-size: 18px;
+    line-height: 1.45;
   }
 
   .benefits li::before {
@@ -161,156 +274,50 @@ const pageDescription =
     left: 0;
     top: 0;
     color: var(--accent);
-    font-weight: 800;
-  }
-
-  .optin {
-    padding: 24px;
-    border-radius: 20px;
-    background: #f7fbff;
-    border: 1px solid #dbeaf5;
-  }
-
-  .optin label {
-    display: block;
-    margin-bottom: 12px;
-    color: var(--dark);
-    font-weight: 700;
-    font-size: 16px;
-  }
-
-  .optin input {
-    width: 100%;
-    height: 56px;
-    padding: 0 18px;
-    border-radius: 14px;
-    border: 1px solid #c8d9e8;
-    font-size: 16px;
-    margin-bottom: 14px;
-    outline: none;
-  }
-
-  .optin input:focus {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 4px rgba(30, 136, 229, 0.12);
-  }
-
-  .optin button {
-    width: 100%;
-    height: 58px;
-    border: 0;
-    border-radius: 14px;
-    background: var(--primary);
-    color: var(--white);
-    font-size: 18px;
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.2s ease;
-  }
-
-  .optin button:hover {
-    background: var(--primary-dark);
-    transform: translateY(-1px);
-  }
-
-  .privacy {
-    margin: 12px 0 0;
-    text-align: center;
-    color: var(--muted);
-    font-size: 13px;
-  }
-
-  .visual {
-    display: flex;
-    justify-content: center;
-  }
-
-  .guide-card {
-    width: 360px;
-    min-height: 480px;
-    padding: 38px;
-    border-radius: 28px;
-    background:
-      radial-gradient(circle at top right, rgba(32, 201, 151, 0.35), transparent 35%),
-      linear-gradient(145deg, #10202f, #1e88e5);
-    color: var(--white);
-    box-shadow: 0 34px 90px rgba(16, 32, 47, 0.25);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-
-  .guide-card .small {
-    margin: 0 0 16px;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    opacity: 0.85;
-  }
-
-  .guide-card h2 {
-    margin: 0 0 16px;
-    font-size: 42px;
-    line-height: 1;
-    letter-spacing: -0.04em;
-  }
-
-  .guide-card p {
-    margin: 0;
-    font-size: 18px;
-    line-height: 1.45;
-    opacity: 0.9;
+    font-weight: 900;
   }
 
   @media (max-width: 860px) {
+    .page {
+      padding: 24px 16px;
+      align-items: flex-start;
+    }
+
     .hero {
       grid-template-columns: 1fr;
-      gap: 28px;
+      gap: 20px;
+      max-width: 460px;
     }
 
-    .content {
-      padding: 32px 22px;
-    }
-
-    .visual {
+    .right-column {
       order: -1;
+      padding: 30px 24px;
     }
 
-    .guide-card {
-      width: 100%;
-      min-height: 320px;
+    .guide-preview {
+      min-height: 230px;
+      padding: 30px 24px;
+    }
+
+    .guide-preview h2 {
+      font-size: 36px;
+    }
+
+    h1 {
+      font-size: 42px;
+    }
+
+    .subheadline {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    .benefits li {
+      font-size: 16px;
+    }
+
+    .form-card {
+      padding: 24px;
     }
   }
-.gr-form-wrapper {
-  width: 100%;
-  max-width: 420px;
-  margin: 24px auto 0;
-  display: block;
-  min-height: 120px;
-}
-
-.gr-form-wrapper getresponse-form {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-}
-
-@media (max-width: 860px) {
-  .gr-form-wrapper {
-    width: 100%;
-    max-width: 100%;
-    margin-top: 24px;
-    display: block;
-    visibility: visible;
-    opacity: 1;
-  }
-
-  getresponse-form {
-    display: block !important;
-    width: 100% !important;
-    min-height: 120px;
-  }
-}
-
 </style>
-
